@@ -18,12 +18,4 @@ export class AppComponent {
     this.activeUsers = this.usersService.activeUsers;
     this.inactiveUsers = this.usersService.inactiveUsers;
   }
-
-  onSetToInactive(id: number) {
-    this.usersService.setToInactive(id)
-  }
-
-  onSetToActive(id: number) {
-    this.usersService.setToActive(id)
-  }
 }
