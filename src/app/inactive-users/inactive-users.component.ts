@@ -11,8 +11,6 @@ import { CounterService } from "../counter.service";
 export class InactiveUsersComponent {
   @Input() users: string[];
 
-  private counter = this.counterService.counter;
-
   constructor(
     private usersService: UsersService,
     private counterService: CounterService
