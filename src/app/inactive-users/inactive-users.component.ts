@@ -9,7 +9,11 @@ import { CounterService } from "../counter.service";
   providers: [CounterService]
 })
 export class InactiveUsersComponent {
-  @Input() users: string[];
+  public users;
+
+  ngOnInit(){
+    this.users = this.usersService.inactiveUsers;
+  }
 
   constructor(
     private usersService: UsersService,

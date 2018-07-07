@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { UsersService } from "../users.service";
 import { CounterService } from "../counter.service";
 
@@ -9,7 +9,11 @@ import { CounterService } from "../counter.service";
   providers: [CounterService]
 })
 export class ActiveUsersComponent {
-  @Input() users: string[];
+  public users;
+
+  ngOnInit(){
+    this.users = this.usersService.activeUsers;
+  }
 
   constructor(
     private usersService: UsersService,
